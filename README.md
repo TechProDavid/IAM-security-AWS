@@ -1,7 +1,7 @@
 <h1>Advanced Roles and Group Management using IAM </h1>
 
 <h2>Description</h2>
-Identity and Access Management in AWS helps you securely manage and control access to AWS resources for users, through groups, roles and permissions. Roles and permissions grant or revoke authorizations to resources without any credentials. In this lab, I secured the organization's environment, using IAM policies and roles to grant and revoke S3 permissions for certain groups and users. In the final step, I verified the correct functioning of these policies utilizing the command line interface to perform operations on S3.
+Identity and Access Management in Amazon Web Service (AWS) helps you securely manage and control access to AWS resources for users, through groups, roles and permissions. Roles and permissions grant or revoke authorizations to resources without any credentials. In this lab, I secured the organization's environment, using IAM policies and roles to grant and revoke S3 (AWS Storage Service) permissions for certain groups and users. In the final step, I verified the correct functioning of these policies utilizing the command line interface to perform operations on S3.
 <br />
 
 
@@ -60,4 +60,4 @@ Verifying that the user John cannot perform S3 operations: <br/>
 Note: I logged into the Linux instance as user John, using his access and secret keys, to verify that the "read only" persmission that is attached to his group prevented him from performing S3 operations. 
   <br/>
   <br/>
-As you can see from the comand line error response, the make_bucket operation "failed", because "no identity-based policy allows s3:CreateBucket action", thus confirming that the permission attached implicitely denied all S3 permissions.
+As you can see from the comand line error response, the make_bucket operation "failed", because "no identity-based policy allows s3:CreateBucket action", thus confirming that the permission attached implicitely denied all S3 operations.
