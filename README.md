@@ -57,7 +57,7 @@ Note: The launched EC2 instance has the S3 full access permission attached to it
 Verifying that the user John cannot perform S3 operations: <br/>
 <br/>
 <img src=https://github.com/TechProDavid/Files/blob/main/IAM%20security/verifying%20that%20user%20John%20cannot%20create%20bucket%20.png?raw=true" height="90%" width="90%"/> <br/>
-Note: I logged into the Linux instance as user John, using his access and secret keys, to verify that the "read only" persmission that is attached to his group prevented him from performing S3 operations. 
+Note: I logged into the Linux instance as the user John, using his access and secret keys, to verify that the "read only" persmission that is attached to his group prevented him from performing S3 operations. 
   <br/>
   <br/>
 As you can see from the comand line error response, the make_bucket operation "failed", because "no identity-based policy allows s3:CreateBucket action", thus confirming that the permission attached implicitely denied all S3 operations.
